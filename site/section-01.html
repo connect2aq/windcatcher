@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Section 01 - Inlet & Bell Mouth Fundamentals</title>
+    <link
+      rel="stylesheet"
+      href="assets/css/main.css"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="content-container">
+      <h1>Inlet & Bell Mouth Fundamentals</h1>
+
+      <h2>Inlet & Shaft Area Fundamentals</h2>
+
+      <h3>Room Specifications</h3>
+      <p>Room Area: 4 × 5 = <strong>20 m²</strong></p>
+
+      <h3>Area Calculations</h3>
+
+      <p><strong>1) Inlet Area</strong> → 3% of room area</p>
+      <p>3% × 20 m² = <strong>0.6 m²</strong></p>
+
+      <p><strong>2) Shaft Area</strong> → 3.5% of room area</p>
+      <p>3.5% × 20 m² = <strong>0.7 m²</strong></p>
+
+      <h3>Continuity Principle</h3>
+      <p>According to: <strong>A₁V₁ = A₂V₂</strong></p>
+
+      <p>
+        The cross-sectional area does increase, causing velocity to decrease. We are trading off
+        <strong>velocity for static pressure</strong>, allowing greater mass flow rate (total volume of fresh air delivered) rather than just local velocity at
+        the entrance, as a suction effect is formed, pulling more air through the inlet.
+      </p>
+
+      <p>
+        Making internal shaft slightly larger than inlet, the necessary space is provided for the air to unfold and fill the duct without hitting the walls and
+        creating rotational turbulence or secondary vortices.
+      </p>
+
+      <hr style="margin: 3rem 0; border: none; border-top: 2px solid #ddd" />
+
+      <h2>Bell Mouth Dimensions</h2>
+
+      <h3>Ideal Bell-Mouth Dimensions</h3>
+
+      <h4>Length-to-Shaft Ratio (L / d)</h4>
+      <p>The axial length (L) of the bell-mouth should be: <strong>0.55 × diameter of exit shaft (d)</strong></p>
+      <p>The entry diameter (D) should be: <strong>1.625 × diameter of exit shaft (d)</strong></p>
+
+      <div class="diagram">[Visual: Bell Mouth Shape based on parameters d, L, and B]</div>
+
+      <p>Exit shaft diameter (d): <strong>94 cm</strong> (from 0.7m² cross-sectional shaft area)</p>
+      <p>L = 0.55 × 94 = 51.7 cm ≈ <strong>52 cm</strong></p>
+      <p>Entry Diameter (D) = 1.625 × 94 = 152.75 cm ≈ <strong>153 cm</strong></p>
+
+      <h4>Entry Corner Radius (r / D)</h4>
+
+      <div class="diagram">[Visual: Entry corner radius - r × d → 0.08 × 153 = 12.24cm]</div>
+
+      <p>The most critical factor for minimizing <strong>vena contracta</strong> (flow narrowing) is adding an entry radius (r) that is:</p>
+      <p>
+        <strong>0.08 × entry diameter (D) = 0.08 x 153 = 12.24cm</strong>
+      </p>
+
+      <h3>Performance Benefits</h3>
+      <ul>
+        <li>This specific addition jumpstarts efficiency by around <strong>0.5%</strong></li>
+        <li>Reduces boundary layer thickness by <strong>7 times</strong></li>
+        <li>Allows the air to be closer to the aluminum and remove the heat away much faster</li>
+        <li>The thickness provides the gradual turn air needs to stay laminar (smooth)</li>
+      </ul>
+
+      <h2>Discharge & Loss Coefficients</h2>
+
+      <h3>Relationship between Coefficient of Discharge (C<sub>d</sub>) and Loss Coefficient (K<sub>e</sub>)</h3>
+
+      <p><strong>Without bell mouth</strong> → K<sub>e</sub> = 0.5</p>
+
+      <p><strong>With bell mouth</strong> (first ratio set):</p>
+      <p>C<sub>d</sub> ≥ 0.95 → K<sub>e</sub> < 0.1</p>
+
+      <h3>Formula Relating C<sub>d</sub> to Pressure Loss</h3>
+      <p>ΔP<sub>t</sub> / (0.5 ρ U²<sub>avg</sub>) = −2.207 C<sub>d</sub> + 2.193</p>
+
+      <p>
+        <strong>If C<sub>d</sub> = 0.975</strong> → K<sub>e</sub> = 0.041
+      </p>
+    </main>
+
+    <nav class="page-navigation">
+      <a
+        href="overview.html"
+        class="nav-button nav-button-prev"
+        >Overview</a
+      >
+      <a
+        href="section-03.html"
+        class="nav-button nav-button-next"
+        >Nose Cone</a
+      >
+    </nav>
+
+    <footer class="site-footer">© WindCatcher Technical Documentation</footer>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Section 03 - Nose Cone & Inlet Torus Design</title>
+    <link
+      rel="stylesheet"
+      href="assets/css/main.css"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="content-container">
+      <h1>Nose Cone & Inlet Torus Design</h1>
+
+      <h2>Inlet Torus Gap</h2>
+
+      <p>Cylindrical area of gap (where wind enters) must be <strong>greater than entry area of bell-mouth</strong>.</p>
+
+      <p><strong>Area of bell-mouth entry:</strong></p>
+      <p>πD² / 4 (D = entry diameter)</p>
+
+      <p><strong>Area of 360° gap:</strong></p>
+      <p>π × D × H<sub>gap</sub></p>
+
+      <p><strong>Required condition:</strong></p>
+      <p>H<sub>gap</sub> ≥ D / 4</p>
+
+      <p><strong>Range for H<sub>gap</sub>:</strong> 0.25 D to 0.31 D → 38.85 cm to 45.9 cm</p>
+      <p><strong>Selected:</strong> 40 cm</p>
+
+      <div class="diagram">[Visual: Torus gap and bell-mouth sketch]</div>
+
+      <hr style="margin: 3rem 0; border: none; border-top: 2px solid #ddd" />
+
+      <h2>Nose Cone Geometry</h2>
+
+      <h3>Why Should the D/4 Gap be Prioritized Over 3% Room Area Rule?</h3>
+      <ul>
+        <li>Using 3% rule gives gap = 12.5 cm</li>
+        <li>Using H<sub>gap</sub> ≥ D/4 gives gap = 40 cm</li>
+      </ul>
+
+      <p>Using smaller gap would create a <strong>bottleneck</strong>, increasing K<sub>e</sub> and energy loss.</p>
+
+      <h3>Nose Cone</h3>
+      <p><strong>Shape:</strong> Conical or elliptical profile with a sharper apex</p>
+
+      <p>As angle of apex decreases (becomes pointier), drag coefficient C<sub>d</sub> decreases.</p>
+
+      <p><strong>Optimal height:</strong> 0.5 r to 1.5 r (1.5r gives <strong>81.4% reduction in head loss</strong>)</p>
+
+      <p>r = radius of shaft = 47 cm</p>
+      <p>1.5 × 47 = 70.5 cm ≈ <strong>71 cm</strong> (height of nose cone [conical])</p>
+
+      <p><strong>Diameter of cone</strong> = shaft diameter = <strong>94 cm</strong></p>
+
+      <div class="diagram">[Visual: Nose cone profile sketch]</div>
+
+      <hr style="margin: 3rem 0; border: none; border-top: 2px solid #ddd" />
+
+      <h2>Nose Cone Extension Logic</h2>
+
+      <ul>
+        <li>Purpose of nose cone is to <strong>eliminate stagnation point</strong> when air hits a blunt surface.</li>
+        <li>Acts as <strong>curved guide rail</strong></li>
+        <li>Extending cone into shaft expands flow area by <strong>76.29%</strong></li>
+        <li>Prevents <strong>flow tipping and wake formation</strong></li>
+        <li>Avoids massive turbulence at shaft center</li>
+      </ul>
+    </main>
+
+    <nav class="page-navigation">
+      <a
+        href="section-01.html"
+        class="nav-button nav-button-prev"
+        >Inlet Design</a
+      >
+      <a
+        href="section-04.html"
+        class="nav-button nav-button-next"
+        >Vanes</a
+      >
+    </nav>
+
+    <footer class="site-footer">© WindCatcher Technical Documentation</footer>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Reference – Windcatcher Design Notes</title>
+
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        line-height: 1.7;
+        margin: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+
+      .page-block {
+        border-bottom: 2px solid #e0e0e0;
+        margin-bottom: 3.5rem;
+        padding-bottom: 3.5rem;
+      }
+
+      .page-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .visual-placeholder {
+        margin: 1.5rem 0;
+        padding: 1.2rem;
+        border: 1px dashed #999;
+        font-size: 0.9rem;
+        color: #666;
+        background: #fafafa;
+      }
+
+      .formula {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        background: #f5f5f5;
+        padding: 0.4rem 0.6rem;
+        display: inline-block;
+        margin: 0.4rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Reference Content – Windcatcher Design (Pages 01–10)</h1>
+    <p>This file contains direct transcription of handwritten design notes. No restructuring or interpretation has been applied.</p>
+
+    <!-- ================= PAGE 01 ================= -->
+    <div class="page-block">
+      <div class="page-title">Page 01 – Inlet & Shaft Area Fundamentals</div>
+
+      <p><strong>Room Area:</strong> 4 × 5 = 20 m²</p>
+
+      <p><strong>1) Inlet Area</strong> → 3% of room area</p>
+      <p>3% × 20 m² = 0.6 m²</p>
+
+      <p><strong>2) Shaft Area</strong> → 3.5% of room area</p>
+      <p>3.5% × 20 m² = 0.7 m²</p>
+
+      <p><strong>According to:</strong></p>
+      <div class="formula">A₁V₁ = A₂V₂</div>
+
+      <p>
+        The cross-sectional area does increase, causing velocity to decrease. We are trading off velocity for static pressure, allowing greater mass flow rate
+        (total volume of fresh air delivered) rather than just local velocity at the entrance, as a suction effect is formed, pulling more air through the
+        inlet.
+      </p>
+
+      <p>
+        Making internal shaft slightly larger than inlet, the necessary space is provided for the air to unfold and fill the duct without hitting the walls and
+        creating rotational turbulence or secondary vortices.
+      </p>
+    </div>
+
+    <!-- ================= PAGE 02 ================= -->
+    <div class="page-block">
+      <div class="page-title">Page 02 – Bell Mouth Dimensions</div>
+
+      <p><strong>Ideal bell-mouth dimensions</strong></p>
+
+      <p>Length-to-shaft ratio (L / d)</p>
+
+      <p>
+        The axial length (L) of the bell-mouth should be:
+        <span class="formula">0.55 × maximum diameter of exit shaft (d)</span>
+      </p>
+
+      <p>Exit shaft diameter (d): 94 cm</p>
+      <p>L = 0.55 × 94 = 51.7 cm ≈ 52 cm</p>
+
+      <p>B = 1.625 × 94 = 152.75 cm ≈ 153 cm</p>
+
+      <p>Entry corner radius (r / D)</p>
+
+      <p>
+        The most critical factor for minimizing vena contracta (flow narrowing) is adding an entry radius (r) that is:
+        <span class="formula">0.08 × entry diameter (D)</span>
+      </p>
+
+      <p>
+        This specific addition jumpstarts efficiency by around 0.5% and reduces boundary layer thickness by 7 times, allowing the air to be closer to the
+        aluminum and remove the heat away much faster.
+      </p>
+
+      <p>The thickness provides the gradual turn air needs to stay laminar (smooth).</p>
+
+      <div class="visual-placeholder">Bell-mouth geometry sketch (entry, exit, axial length, corner radius)</div>
+    </div>
+
+    <!-- ================= PAGE 03 ================= -->
+    <div class="page-block">
+      <div class="page-title">Page 03 – Alternative Ratio Set & Selection</div>
+
+      <p><strong>Second set of ratios</strong> → used in aeronautics or Formula 1 cars</p>
+
+      <p>L = d (exit diameter)</p>
+      <p>D (entry diameter) = 2.13 d</p>
+      <p>Corner radius = 0.08 D = 0.1704 d</p>
+
+      <p>Preferred ratios chosen:</p>
+
+      <ul>
+        <li>L = 0.55 d → 52 cm</li>
+        <li>D = 1.625 d → 153 cm</li>
+        <li>Corner radius = 0.08 d → 12.24 cm</li>
+      </ul>
+
+      <p><strong>→ Choose this!</strong></p>
+
+      <p>Area calculation notes:</p>
+      <div class="formula">πD² / 4 = A × Hgap</div>
+
+      <p>0.6 m² = 6000 cm² Resulting Hgap ≈ 1.9 cm (not selected)</p>
+    </div>
+
+    <!-- ================= PAGE 04 ================= -->
+    <div class="page-block">
+      <div class="page-title">Page 04 – Discharge & Loss Coefficients</div>
+
+      <p><strong>Relationship between Coefficient of Discharge (Cd) and Loss Coefficient (Ke)</strong></p>
+
+      <p>Without bell mouth → Ke = 0.5</p>
+      <p>With bell mouth (first ratio set):</p>
+      <p>Cd ≥ 0.95 → Ke &lt; 0.1</p>
+
+      <p><strong>Formula relating Cd to pressure loss:</strong></p>
+      <div class="formula">ΔPₜ / (0.5 ρ U²avg) = −2.207 Cd + 2.193</div>
+
+      <p>If Cd = 0.975 → Ke = 0.041</p>
+
+      <p><strong>Notes:</strong></p>
+      <ul>
+        <li>To ensure air moves across the room, outlet-to-wall ratio should be 30%</li>
+        <li>Placing outlets at floor level provides more uniform distribution and thermal comfort</li>
+        <li>Cross-sectional shape: regular octagonal improves flow uniformity by 3×</li>
+        <li>Height should not exceed 3 storeys</li>
+      </ul>
+    </div>
+
+    <!-- ================= PAGE 05 ================= -->
+    <div class="page-block">
+      <div class="page-title">Page 05 – Inlet Torus Gap</div>
+
+      <p>Integrate a nose cone at base or intersection of shaft:</p>
+
+      <ul>
+        <li>Decrease stagnation</li>
+        <li>Expand flow area by 76.29%</li>
+        <li>Reduce energy loss (head loss) by 8.4%</li>
+      </ul>
+
+      <p><strong>Inlet Torus Gap</strong></p>
+
+      <p>Cylindrical area of gap (where wind enters) must be greater than entry area of bell-mouth.</p>
+
+      <p>Area of bell-mouth entry:</p>
+      <div class="formula">πD² / 4</div>
+
+      <p>Area of 360° gap:</p>
+      <div class="formula">π × D × Hgap</div>
+
+      <p>Hgap ≥ D / 4</p>
+
+      <p>
+        Range for Hgap: 0.25 D to 0.31 D → 38.85 cm to 45.9 cm
+        <strong>Selected: 40 cm</strong>
+      </p>
+
+      <div class="visual-placeholder">Torus gap and bell-mouth sketch</div>
+    </div>
+
+    <!-- ================= PAGE 06 ================= -->
+    <div class="page-block">
+      <div class="page-title">Page 06 – Nose Cone Geometry</div>
+
+      <p>Why should the D gap be prioritized over 3% rule?</p>
+
+      <p>Using 3% rule gives gap = 12.5 cm Using Hgap ≥ D/4 gives gap = 40 cm</p>
+
+      <p>Using smaller gap would create a bottleneck, increasing Ke and energy loss.</p>
+
+      <p><strong>Nose Cone</strong></p>
+
+      <p>Shape: conical or elliptical profile with a sharper apex</p>
+
+      <p>As angle of apex decreases (becomes pointier), drag coefficient Cd decreases.</p>
+
+      <p>Optimal height: 0.5 r to 1.5 r</p>
+
+      <p>r = radius of shaft = 47 cm</p>
+      <p>1.5 × 47 = 70.5 cm ≈ 71 cm</p>
+
+      <p>Diameter of cone = shaft diameter = 94 cm</p>
+
+      <div class="visual-placeholder">Nose cone profile sketch</div>
+    </div>
+
+    <!-- ================= PAGE 07 ================= -->
+    <div class="page-block">
+      <div class="page-title">Page 07 – Nose Cone Extension Logic</div>
+
+      <p>Purpose of nose cone is to eliminate stagnation point when air hits a blunt surface.</p>
+
+      <ul>
+        <li>Nose cone acts as curved guide rail</li>
+        <li>Extending cone into shaft expands flow area by 76.29%</li>
+        <li>Prevents flow tipping and wake formation</li>
+        <li>Avoids massive turbulence at shaft center</li>
+      </ul>
+    </div>
+
+    <!-- ================= PAGE 08 ================= -->
+    <div class="page-block">
+      <div class="page-title">Page 08 – Vanes Geometry & Logarithmic Spiral</div>
+
+      <p>Vanes thickness: 5 mm throughout</p>
+
+      <p><strong>Vane parameters by depth:</strong></p>
+
+      <ul>
+        <li>0–40 cm: Entry gap, vane angle 31°, width 27.5 → 31.3 cm</li>
+        <li>40–71 cm: Transition, vane angle 31° → 0°, width 31.3 → 45 cm</li>
+        <li>71 cm: Cone tip, vane angle 0°, width 45 cm</li>
+        <li>71–112 cm: Guidance, vane angle 0°, width 47 cm</li>
+        <li>112–122 cm: Mixing zone, 18° kick</li>
+      </ul>
+
+      <p>Arc gap reduces from 40 cm → 26 cm → 24.6 cm</p>
+
+      <p>Logarithmic spiral from upper torus to bell-mouth entrance:</p>
+
+      <div class="formula">r = a e^(bθ)</div>
+
+      <p>a = 76.5 cm (starting radius)</p>
+      <p>b = cot(β) = cot(31°) ≈ 1.66</p>
+
+      <p>Using this ensures air always sees same vane slope and prevents stalling.</p>
+
+      <div class="visual-placeholder">Logarithmic spiral vane layout</div>
+    </div>
+
+    <!-- ================= PAGE 09 ================= -->
+    <div class="page-block">
+      <div class="page-title">Page 09 – Vane Angle Progression</div>
+
+      <p>Unwinding the vanes from 31° → 0° is done through a parabolic progression instead of linear.</p>
+
+      <p><strong>Formula:</strong></p>
+      <div class="formula">β(x) = βinlet (1 − (x / L)²)</div>
+
+      <p>x = current depth (0 → 52 cm)</p>
+      <p>L = total axial length (52 cm)</p>
+      <p>βinlet = 31°</p>
+
+      <p>Why parabolic is better than linear → noted for follow-up</p>
+      <p>Why 2 cm clearance → noted for follow-up</p>
+      <p>Why vanes should be close to cone → noted</p>
+    </div>
+
+    <!-- ================= PAGE 10 ================= -->
+    <div class="page-block">
+      <div class="page-title">Page 10 – Micro-Scale Vortex Generators (MVG)</div>
+
+      <p>MVG (Micro-scale vortex generators)</p>
+
+      <ul>
+        <li>10%–50% of local boundary layer thickness</li>
+        <li>Taller → parasitic drag</li>
+        <li>Short → cannot draw momentum air towards wall</li>
+      </ul>
+
+      <p>Airfoil profiling gives ~27.68% reduction in drag and stronger vortices downstream.</p>
+
+      <p>Spacing ratio:</p>
+      <div class="formula">λ / h = 5</div>
+
+      <p>Prevents flow separation, ensures air fills full 153 cm exit instead of leaving as narrow turbulent jet.</p>
+
+      <p>Placement ratio in conical diffuser:</p>
+      <div class="formula">x / L = 0.05 to 0.10</div>
+
+      <p>x = distance from start of diffuser L = total diffuser length</p>
+
+      <p>x = 153 × 0.05 = 7.65 cm x = 153 × 0.10 = 15.3 cm</p>
+
+      <p><strong>→ Place MVG ~15 cm down diffuser</strong></p>
+    </div>
+  </body>
+</html>

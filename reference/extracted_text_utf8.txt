@@ -1,0 +1,169 @@
+Reflective Statement on Independent Research Project
+Windcatcher Design and Passive Ventilation Optimization
+This project began with a simple question: how can a traditional windcatcher be redesigned to deliver fresh air more effectively into an indoor space without relying on mechanical systems? What initially appeared to be an architectural exploration gradually evolved into a deeper investigation of airflow behavior, pressure loss, and flow conditioning.
+My early work relied on commonly cited proportional rules in passive ventilation design, such as defining inlet area as a percentage of room size. While these rules were useful starting points, I soon realized that they did not explain why certain configurations performed better than others. This led me to study fundamental fluid mechanics principles, particularly continuity, pressure–velocity trade-offs, and boundary layer behavior. Applying the continuity relationship (A₁V₁ = A₂V₂) helped me understand that effective ventilation depends more on total mass flow rate than on local air velocity at the inlet.
+A major focus of the project became the role of geometric transitions in controlling airflow quality. Through the study of bell-mouth inlets and diffuser theory, I learned how smooth curvature, appropriate entry radii, and gradual area expansion can significantly reduce energy losses and prevent flow separation. This understanding guided my design of a bell-mouth inlet and shaft transition that prioritizes controlled expansion rather than abrupt changes. The inclusion of a nose cone further addressed stagnation points and wake formation, guiding airflow into the shaft instead of allowing turbulence to form at blunt intersections.
+As the design developed, I began incorporating concepts from outside traditional architectural practice, particularly from aerospace and automotive aerodynamics. Logarithmic spiral vanes, parabolic vane-angle progression, and micro-scale vortex generators were introduced to manage flow direction, boundary layer behavior, and uniformity. These techniques are uncommon in passive building ventilation, but studying them showed me that the underlying physics is transferable across disciplines. This cross-disciplinary synthesis was one of the most valuable aspects of the project and strengthened my confidence in applying abstract principles to unfamiliar design problems.
+An important lesson from the later stages of the work was the importance of defining design envelopes rather than relying on single “optimal” values. For elements such as diffuser area ratios, vane spacing, micro-vortex generator placement, and shaft length, I deliberately worked within bounded ranges instead of fixed dimensions. This approach helped me avoid false precision and better reflect real-world design constraints, where robustness and tolerance often matter more than theoretical optimization.
+I am aware that this work has clear limitations. The performance implications discussed are based on theoretical reasoning, established ratios, and insights from existing engineering literature, rather than experimental testing or computational simulations. I did not have access to wind tunnel facilities or CFD tools, and therefore treated this project as a design and reasoning exercise rather than a validated research study. If given the opportunity to continue this work at university, my next steps would be to define operating conditions more rigorously, test sensitivity to wind speed and turbulence, and validate the design using simulation or physical models.
+This project taught me that research is not about arriving at final answers, but about understanding assumptions, asking better questions, and making informed design decisions within constraints. More importantly, it confirmed my interest in pursuing engineering and applied sciences at a deeper level. I found that I am particularly motivated by problems that sit at the intersection of mathematics, physics, and design, and I am eager to develop the analytical and experimental skills needed to turn conceptual reasoning into validated solutions.
+
+
+
+Reference Content – Windcatcher Design (Pages 01–10)
+This file contains direct transcription of handwritten design notes. No restructuring or interpretation has been applied.
+Page 01 – Inlet & Shaft Area Fundamentals
+Room Area: 4 × 5 = 20 m²
+1) Inlet Area → 3% of room area
+3% × 20 m² = 0.6 m²
+2) Shaft Area → 3.5% of room area
+3.5% × 20 m² = 0.7 m²
+According to:
+A₁V₁ = A₂V₂
+The cross-sectional area does increase, causing velocity to decrease. We are trading off velocity for static pressure, allowing greater mass flow rate (total volume of fresh air delivered) rather than just local velocity at the entrance, as a suction effect is formed, pulling more air through the inlet.
+Making internal shaft slightly larger than inlet, the necessary space is provided for the air to unfold and fill the duct without hitting the walls and creating rotational turbulence or secondary vortices.
+Page 02 – Bell Mouth Dimensions
+Ideal bell-mouth dimensions
+Length-to-shaft ratio (L / d)
+The axial length (L) of the bell-mouth should be: 0.55 × hydraulic diameter of exit shaft (d)
+[Visual: based on below parameters i.e. d, L and B make Bell Mouth Shape]
+Exit shaft diameter (d): 94 cm
+L = 0.55 × 94 = 51.7 cm ≈ 52 cm
+B = 1.625 × 94 = 152.75 cm ≈ 153 cm
+Entry corner radius (r / D)
+[Visual: based on below parameters i.e. r x d -> 0.08 x 153 = 12.24cm, make entry corner radius visual]
+The most critical factor for minimizing vena contracta (flow narrowing) is adding an entry radius (r) that is: 0.08 × entry diameter (D)
+This specific addition jumpstarts efficiency by around 0.5% and reduces boundary layer thickness by 7 times, allowing the air to be closer to the aluminum and remove the heat away much faster.
+The thickness provides the gradual turn air needs to stay laminar (smooth).
+Page 03 – Alternative Ratio Set & Selection
+Second set of ratios → used in aeronautics or Formula 1 cars
+L = d (exit diameter)
+D (entry diameter) = 2.13 d
+Corner radius = 0.08 D = 0.1704 d
+Preferred ratios chosen:
+L = 0.55 d → 52 cm
+D = 1.625 d → 153 cm
+Corner radius = 0.08 d → 12.24 cm
+→ Choose this!
+Area calculation notes:
+πD² / 4 = A × Hgap
+0.6 m² = 6000 cm² Resulting Hgap ≈ 1.9 cm (not selected)
+Page 04 – Discharge & Loss Coefficients
+Relationship between Coefficient of Discharge (Cd) and Loss Coefficient (Ke)
+Without bell mouth → Ke = 0.5
+With bell mouth (first ratio set):
+Cd ≥ 0.95 → Ke < 0.1
+Formula relating Cd to pressure loss:
+ΔPₜ / (0.5 ρ U²avg) = −2.207 Cd + 2.193
+If Cd = 0.975 → Ke = 0.041
+Notes:
+To ensure air moves across the room, outlet-to-wall ratio should be 30%
+Placing outlets at floor level provides more uniform distribution and thermal comfort
+Cross-sectional shape: regular octagonal improves flow uniformity by 3×
+Height should not exceed 3 storeys
+Page 05 – Inlet Torus Gap
+Integrate a nose cone at base or intersection of shaft:
+Decrease stagnation
+Expand flow area by 76.29%
+Reduce energy loss (head loss) by 8.4%
+Inlet Torus Gap
+Cylindrical area of gap (where wind enters) must be greater than entry area of bell-mouth.
+Area of bell-mouth entry:
+πD² / 4 (D = entry diameter)
+Area of 360° gap:
+π × D × Hgap
+Hgap ≥ D / 4
+Range for Hgap: 0.25 D to 0.31 D → 38.85 cm to 45.9 cm Selected: 40 cm
+[Visual: Torus gap and bell-mouth sketch]
+Page 06 – Nose Cone Geometry
+Why should the D gap be prioritized over 3% rule?
+Using 3% rule gives gap = 12.5 cm Using Hgap ≥ D/4 gives gap = 40 cm
+Using smaller gap would create a bottleneck, increasing Ke and energy loss.
+Nose Cone
+Shape: conical or elliptical profile with a sharper apex
+As angle of apex decreases (becomes pointier), drag coefficient Cd decreases.
+Optimal height: 0.5 r to 1.5 r (1.5r gives 81.4% reduction in head loss)
+r = radius of shaft = 47 cm
+1.5 × 47 = 70.5 cm ≈ 71 cm (height of nose cone [conical])
+Diameter of cone = shaft diameter = 94 cm
+[Visual: Nose cone profile sketch]
+Page 07 – Nose Cone Extension Logic
+Purpose of nose cone is to eliminate stagnation point when air hits a blunt surface.
+Nose cone acts as curved guide rail
+Extending cone into shaft expands flow area by 76.29%
+Prevents flow tipping and wake formation
+Avoids massive turbulence at shaft center
+Page 08 – Vanes Geometry & Logarithmic Spiral
+Vanes thickness: 5 mm throughout
+Vane parameters by depth:
+0–40 cm: Entry gap, vane angle 31°, width 27.5 → 31.3 cm, Arc Gap 40cm
+40–71 cm: Transition, vane angle 31° → 0°, width 31.3 → 45 cm, Arc Gap 26cm
+71 cm: Cone tip, vane angle 0°, width 45 cm, Arc gap 26.2cm
+71–112 cm: Guidance, vane angle 0°, width 47 cm, Arc gap 24.6cm
+112 cm: Find End, vane angle 0°, width 47cm, Arc gap 24.6cm
+112–122 cm: MVG Zone, 18° kick, Width Height of MVG, Arc gap: MVG of vane will be 24.6cm apart
+Arc gap reduces from 40 cm → 26 cm → 24.6 cm
+Logarithmic spiral from upper torus to bell-mouth entrance:
+r = a e^(bθ)
+a = 76.5 cm (starting radius)
+b = cot(β) = cot(31°) ≈ 1.66
+Using this ensures air always sees same vane slope and prevents stalling.
+Logarithmic spiral vane layout
+Page 09 – Vane Angle Progression
+Unwinding the vanes from 31° → 0° is done through a parabolic progression instead of linear.
+Formula:
+β(x) = βinlet (1 − (x / L)²)
+x = current depth (0 → 52 cm)
+L = total axial length (52 cm)
+βinlet = 31°
+Why parabolic is better than linear → noted for follow-up
+Why 2 cm clearance → noted for follow-up
+Why vanes should be close to cone → noted
+Page 10 – Micro-Scale Vortex Generators (MVG)
+MVG (Micro-scale vortex generators)
+10%–50% of local boundary layer thickness
+Taller → parasitic drag
+Short → cannot draw momentum air towards wall
+Airfoil profiling gives ~27.68% reduction in drag and stronger vortices downstream.
+Spacing ratio:
+λ / h = 5
+Prevents flow separation, ensures air fills full 153 cm exit instead of leaving as narrow turbulent jet.
+Placement ratio in conical diffuser:
+x / L = 0.05 to 0.10
+x = distance from start of diffuser L = total diffuser length
+x = 153 × 0.05 = 7.65 cm x = 153 × 0.10 = 15.3 cm
+→ Place MVG ~15 cm down diffuser
+PAGE 11 — MVG Placement, Spacing, and Offset Logic
+Height ratio
+0.8 < h/ δ < 1.0
+h = 0.8δ
+Length = 2.5h
+Spacing ratio
+3 < s/h < 5
+Selected:
+Spacing = 5h
+15° offset from the vane axis
+The vane is placed so that the MVG receives undisturbed air at maximum velocity and highest energy.
+Circumference of diffuser at 15 cm down:
+≈ 94.8 × π ≈ 297.8 cm
+To offset, move 12.4 cm away from any vane line, place first MVG pair, and then add the remaining 11 MVG pairs after every 24.8 cm.
+[Visual placeholder — MVG spacing and circumferential layout sketch]
+
+PAGE 12 — Diffuser Geometry and Shaft Length
+Diffuser:
+Follows 2.6 : 1 area ratio
+Bell-mouth style with same ratios
+Top diameter = 94 cm
+Bottom diameter = 153 cm
+Axial length = 52 cm
+Entry corner radius:
+Radius = 0.08 × 153
+= 12.2 cm
+[Visual placeholder — bell-mouth diffuser sketch]
+Shaft length = 150 cm
+Constraint:
+0.40d < shaft length < 4.0d
+Selected:
+1.6d
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Section 04 - Vane Geometry & Logarithmic Spirals</title>
+    <link
+      rel="stylesheet"
+      href="assets/css/main.css"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="content-container">
+      <h1>Vane Geometry & Logarithmic Spirals</h1>
+
+      <h2>Vanes Geometry & Logarithmic Spiral</h2>
+
+      <h3>Vanes Thickness</h3>
+      <p><strong>5 mm</strong> throughout</p>
+
+      <h3>Vane Parameters by Depth</h3>
+
+      <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0">
+        <tr style="border-bottom: 2px solid #333">
+          <th style="text-align: left; padding: 0.5rem">Depth Range</th>
+          <th style="text-align: left; padding: 0.5rem">Zone</th>
+          <th style="text-align: left; padding: 0.5rem">Vane Angle</th>
+          <th style="text-align: left; padding: 0.5rem">Width</th>
+          <th style="text-align: left; padding: 0.5rem">Arc Gap</th>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd">
+          <td style="padding: 0.5rem">0–40 cm</td>
+          <td style="padding: 0.5rem">Entry gap</td>
+          <td style="padding: 0.5rem">31°</td>
+          <td style="padding: 0.5rem">27.5 → 31.3 cm</td>
+          <td style="padding: 0.5rem">40cm</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd">
+          <td style="padding: 0.5rem">40–71 cm</td>
+          <td style="padding: 0.5rem">Transition</td>
+          <td style="padding: 0.5rem">31° → 0°</td>
+          <td style="padding: 0.5rem">31.3 → 45 cm</td>
+          <td style="padding: 0.5rem">40 → 26.2 cm</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd">
+          <td style="padding: 0.5rem">71 cm</td>
+          <td style="padding: 0.5rem">Cone tip</td>
+          <td style="padding: 0.5rem">0°</td>
+          <td style="padding: 0.5rem">45 cm</td>
+          <td style="padding: 0.5rem">26.2cm</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd">
+          <td style="padding: 0.5rem">71–112 cm</td>
+          <td style="padding: 0.5rem">Guidance</td>
+          <td style="padding: 0.5rem">0°</td>
+          <td style="padding: 0.5rem">47 cm</td>
+          <td style="padding: 0.5rem">24.6cm</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd">
+          <td style="padding: 0.5rem">112 cm</td>
+          <td style="padding: 0.5rem">Fin End</td>
+          <td style="padding: 0.5rem">0°</td>
+          <td style="padding: 0.5rem">47cm</td>
+          <td style="padding: 0.5rem">24.6cm</td>
+        </tr>
+      </table>
+
+      <p><strong>Arc gap reduces:</strong> 40 cm → 26 cm → 24.6 cm</p>
+      <p><strong>Vane width calculation = R₍bellmouth₎ − R₍cone₎ − clearance</strong></p>
+
+      <h3>Logarithmic Spiral from Upper Torus to Bell-Mouth Entrance</h3>
+<p>
+    <ul>
+        <li>Using this allows the air to see the same vane slope at all points along the spiral</li>
+        <li>This prevents the air from stalling or creating turbulance as it accelerates</li>
+    </ul>
+</p>
+      <p><strong>Formula:</strong> r = a e<sup>bθ</sup></p>
+
+      <ul>
+        <li>a = 76.5 cm (starting radius)</li>
+        <li>b = cot(β) = cot(31°) ≈ 1.66 (The growth factor that determines how tightly the spiral winds)</li>
+      </ul>
+
+      <p>Using this ensures air always sees the same vane slope and <strong>prevents stalling</strong>.</p>
+
+      <div class="diagram">[Visual: Logarithmic spiral vane layout]</div>
+
+      <hr style="margin: 3rem 0; border: none; border-top: 2px solid #ddd" />
+
+      <h2>Vane Angle Progression</h2>
+
+      <p>
+        Unwinding the vanes from <strong>31° → 0°</strong> is done through a <strong>parabolic progression</strong>
+        instead of linear.
+      </p>
+
+      <h3>Formula</h3>
+      <p>β(x) = β<sub>inlet</sub> (1 − (x / L)²)</p>
+
+      <ul>
+        <li>x = current depth (0 → 52 cm)</li>
+        <li>L = total axial length (52 cm)</li>
+        <li>β<sub>inlet</sub> = 31°</li>
+      </ul>
+
+      <h3>Notes for Follow-Up</h3>
+      <h4>Why parabolic is better than linear</h4>
+        <ul>
+            <li>As air passes through a vane, it undergoes acceleration due to changes in flow direction, resulting in pressure gradients along the vane surface.</li>
+            <li>A linear vane profile introduces abrupt curvature at the inlet and outlet, causing sudden pressure spikes that increase adverse pressure gradients and promote flow separation, particularly near the wall where the boundary layer is still developing.
+            </li>
+            <li>A parabolic vane profile imposes a smooth, continuous change in curvature, maintaining a more uniform rate of momentum change along the vane length and avoiding localized regions of high stress or turbulence.
+            </li>
+            <li>As air travels along the bell-mouth and vane surfaces, the boundary layer thickens due to viscous effects at the wall.</li>
+            <li>A linear vane does not account for this boundary layer growth, often forcing the flow to turn sharply while it is still stabilizing against the surface.</li>
+            <li>A parabolic vane initially applies gentle turning where the airflow is faster and less organized, and progressively increases turning as the flow approaches the shaft, where the boundary layer is more developed.</li>
+            <li>This alignment between vane curvature and boundary layer growth improves flow attachment, enhances velocity uniformity, and reduces energy losses through the inlet and transition region.</li>
+        </ul>
+        <h4>Why 2 cm clearance</h4>
+        <ul>
+            <li>Vibration Dampening (The “Chatter” Problem): Aluminum expands and vibrates under high wind speeds. If the 5mm aluminium vane were touching the cone without being welded, it would “clatter” against the cone like a drum, leading to noise and eventual metal fatigue/cracking.</li>
+            <li>The Boundary Layer “Slip”: Air right next to a surface moves slower (the boundary layer). A 2cm gap allows a thin “film” of air to slip between the vane edge and the cone. This prevents the vane from “tripping” the air that is moving along the cone’s surface, keeping the flow attached and laminar.</li>
+            <li>Thermal Expansion: Since you are using aluminium, it expands more than steel when it gets hot in the sun. That 2cm gives the structure “room to breathe” so it doesn’t warp or buckle the nose cone.</li>
+        </ul>
+        <h4>Why vanes should be close to cone</h4>
+        <ul>
+            <li>Pressure Containment: If the vanes were far away from the cone (e.g., a 10 cm or 20 cm gap), the air would simply “leak” sideways from one vane section to another. This cross-flow creates large “boundary layer separation” bubbles that destroy your suction.</li>
+            <li>The “Piston” Effect: By keeping the vanes close to the cone, you force the air to stay within its 12 designated “lanes.” This maintains the high-velocity “slug” of air that is necessary to achieve that 81.4% reduction in head loss.</li>
+            <li>Preventing the Center-Vortex: Without vanes hugging the cone, the air would naturally start to “spin” around the cone in a chaotic way, creating a low-pressure “dead zone” right where you want the most flow.</li>
+        </ul>
+
+    </main>
+
+    <nav class="page-navigation">
+      <a
+        href="section-03.html"
+        class="nav-button nav-button-prev"
+        >Nose Cone & Torus</a
+      >
+      <a
+        href="section-05.html"
+        class="nav-button nav-button-next"
+        >Micro-Vortex Gen</a
+      >
+    </nav>
+
+    <footer class="site-footer">© WindCatcher Technical Documentation</footer>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(cat:*)",
+      "Bash(python -c:*)",
+      "Bash(python update_html_files.py:*)"
+    ]
+  }
+}
