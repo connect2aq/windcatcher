@@ -16,6 +16,7 @@ body {
   line-height: 1.7;
   color: #1a1a1a;
   background: #ffffff;
+  position: relative;
 }
 
 /* ===============================
@@ -24,9 +25,12 @@ body {
 .site-header {
   border-bottom: 1px solid #e6e6e6;
   background: #fff;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
 .nav-container {

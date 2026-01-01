@@ -14,6 +14,7 @@ const headerHTML = `
             <li><a href="section-07.html" data-page="section-07">Summary</a></li>
             <li><a href="appendix.html" data-page="appendix">Appendix</a></li>
             <li><a href="citations.html" data-page="citations">Citations</a></li>
+            <li><a href="research-notebook.html" data-page="research-notebook">Research Notebook</a></li>
         </ul>
     </nav>
 </header>
