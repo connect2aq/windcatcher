@@ -16,69 +16,172 @@
     <div id="header-placeholder"></div>
 
     <main class="content-container">
-      <h1>Micro-Vortex Generators</h1>
+      <h1>Micro-Scale Vortex Generators (MVGs)</h1>
 
-      <h2>Micro-Scale Vortex Generators (MVG)</h2>
-
-      <h3>MVG Sizing</h3>
-      <p><strong>10%–100% of local boundary layer thickness (Choosing 80%)</strong></p>
-
-      <ul>
-        <li><strong>Taller</strong> → parasitic drag</li>
-        <li><strong>Short</strong> → cannot draw momentum air towards wall</li>
-      </ul>
-
-      <p>Airfoil profiling gives <strong>~27.68% reduction in drag</strong> and stronger vortices downstream.</p>
-
-      <h3>Spacing Ratio</h3>
-      <p>λ / h = 3 to 5 (Choosing 5)</p>
-
-      <p>Prevents flow separation, ensures air fills full 153 cm exit instead of leaving as narrow turbulent jet.</p>
-
-      <h3>Placement Ratio in Conical Diffuser</h3>
-      <p>x / L = 0.05 to 0.10</p>
-
-      <ul>
-        <li>x = distance from start of diffuser</li>
-        <li>L = total diffuser length</li>
-      </ul>
-
-      <p>x = 153 × 0.05 = 7.65 cm</p>
-      <p>x = 153 × 0.10 = 15.3 cm</p>
-
-      <p><strong>→ Place MVG ~15 cm down diffuser</strong></p>
-
-      <hr style="margin: 3rem 0; border: none; border-top: 2px solid #ddd" />
-
-      <h2>MVG Placement, Spacing, and Offset Logic</h2>
-
-      <h3>Offset Configuration</h3>
-      <p><strong>15° offset from the vane axis</strong></p>
-
-      <p>This allows MVG receives undisturbed air at maximum velocity and highest energy.</p>
-
-      <h3>Circumferential Layout</h3>
-      <p>Circumference of diffuser at 15 cm down:</p>
-      <p>≈ 94.8 × π ≈ <strong>297.8 cm</strong></p>
-
+      <h2>Purpose</h2>
       <p>
-        To offset, move <strong>12.4 cm away from any vane line</strong>, place first MVG pair, and then add the remaining
-        <strong>11 MVG pairs after every 24.8 cm</strong>.
+        Micro-vortex generators were explored as a conceptual boundary-layer control strategy to mitigate flow separation under adverse
+        pressure gradients in diffuser-type geometries. Their inclusion is based on established aerodynamic literature and is treated as
+        <strong>exploratory</strong> rather than optimized for this specific passive ventilation system.
       </p>
 
-      <div class="diagram">[Visual: MVG spacing and circumferential layout sketch]</div>
+      <hr style="margin: 2rem 0; border: none; border-top: 2px solid #ddd;">
+
+      <h2>MVG Sizing (Height)</h2>
+
+      <p><strong>Literature-supported range:</strong></p>
+      <p style="text-align: center; font-size: 1.1rem; margin: 1rem 0;">
+        <em>h</em> / <em>δ</em> ≈ 0.2 to 0.4
+      </p>
+
+      <p><strong>Where:</strong></p>
+      <ul>
+        <li><em>h</em> = MVG height</li>
+        <li><em>δ</em> = local boundary-layer thickness</li>
+      </ul>
+
+      <p><strong>Design choice for this study:</strong></p>
+      <p style="text-align: center; font-size: 1.1rem; margin: 1rem 0;">
+        <em>h</em> ≈ 0.3<em>δ</em>
+      </p>
+
+      <p><strong>Rationale:</strong></p>
+      <ul>
+        <li>Heights below ~0.2<em>δ</em> generate weak vortices</li>
+        <li>Heights above ~0.5<em>δ</em> introduce excessive parasitic drag</li>
+        <li>A mid-range value balances vortex strength and drag, consistent with diffuser studies</li>
+      </ul>
+
+      <p>
+        Airfoil-shaped MVGs were considered based on literature reporting improved vortex coherence and reduced form drag relative to
+        rectangular geometries. Reported drag reductions in controlled studies are noted as contextual references, not as predicted outcomes
+        for this design.
+      </p>
+
+      <hr style="margin: 2rem 0; border: none; border-top: 2px solid #ddd;">
+
+      <h2>MVG Length</h2>
+
+      <p style="text-align: center; font-size: 1.1rem; margin: 1rem 0;">
+        <em>l</em> / <em>h</em> ≈ 4 to 6
+      </p>
+
+      <p><strong>This ratio supports:</strong></p>
+      <ul>
+        <li>Stable vortex formation</li>
+        <li>Delayed vortex breakdown downstream</li>
+      </ul>
+
+      <hr style="margin: 2rem 0; border: none; border-top: 2px solid #ddd;">
+
+      <h2>MVG Spacing</h2>
+
+      <p><strong>Literature-supported range:</strong></p>
+      <p style="text-align: center; font-size: 1.1rem; margin: 1rem 0;">
+        <em>λ</em> / <em>h</em> ≈ 8 to 15
+      </p>
+
+      <p><strong>Design choice for this study:</strong></p>
+      <p style="text-align: center; font-size: 1.1rem; margin: 1rem 0;">
+        <em>λ</em> ≈ 10<em>h</em>
+      </p>
+
+      <p><strong>Rationale:</strong></p>
+      <ul>
+        <li>Prevents vortex interaction and cancellation</li>
+        <li>Maintains uniform boundary-layer energization</li>
+        <li>Avoids unnecessary drag from excessive MVG density</li>
+      </ul>
+
+      <hr style="margin: 2rem 0; border: none; border-top: 2px solid #ddd;">
+
+      <h2>Placement Within the Conical Diffuser</h2>
+
+      <p>
+        MVGs are most effective when placed just upstream of the region where adverse pressure gradients begin to dominate, rather than at
+        the diffuser entrance or exit.
+      </p>
+
+      <p><strong>Placement guideline from literature:</strong></p>
+      <p style="text-align: center; font-size: 1.1rem; margin: 1rem 0;">
+        <em>x</em> / <em>L</em> ≈ 0.05 to 0.15
+      </p>
+
+      <p><strong>Where:</strong></p>
+      <ul>
+        <li><em>x</em> = distance from start of diffuser</li>
+        <li><em>L</em> = total diffuser length</li>
+      </ul>
+
+      <p><strong>For this geometry:</strong></p>
+      <ul>
+        <li><em>L</em> = 153 cm</li>
+        <li><em>x</em> = 7.5 to 23 cm</li>
+      </ul>
+
+      <p><strong>Design placement:</strong></p>
+      <p style="text-align: center; font-size: 1.1rem; margin: 1rem 0;">
+        <em>x</em> ≈ 15 cm
+      </p>
+
+      <p>
+        This position corresponds to the early diffuser expansion zone, where boundary-layer separation risk begins to increase.
+      </p>
+
+      <hr style="margin: 2rem 0; border: none; border-top: 2px solid #ddd;">
+
+      <h2>MVG Orientation and Offset</h2>
+
+      <h3>Yaw Angle</h3>
+      <p style="text-align: center; font-size: 1.1rem; margin: 1rem 0;">
+        <em>α</em> ≈ 15° to 25°
+      </p>
+
+      <p><strong>Design choice:</strong></p>
+      <p style="text-align: center; font-size: 1.1rem; margin: 1rem 0;">
+        <em>α</em> ≈ 15°
+      </p>
+
+      <p>Lower yaw angles reduce drag penalties while maintaining vortex strength in low-speed flows.</p>
+
+      <h3>Circumferential Arrangement</h3>
+      <ul>
+        <li>MVGs are offset from vane centerlines to avoid wake interaction</li>
+        <li>Circumferential spacing follows the selected <em>λ</em> ≈ 10<em>h</em> guideline</li>
+        <li>Placement avoids direct alignment with vane trailing edges</li>
+      </ul>
+
+      <p>
+        This configuration allows MVGs to interact with undisturbed, high-energy flow regions, maximizing boundary-layer re-energization potential.
+      </p>
+
+      <hr style="margin: 2rem 0; border: none; border-top: 2px solid #ddd;">
+
+      <h2>Limitations</h2>
+
+      <p>The effectiveness of MVGs depends strongly on:</p>
+      <ul>
+        <li>Boundary-layer thickness</li>
+        <li>Reynolds number</li>
+        <li>Pressure-gradient distribution</li>
+      </ul>
+
+      <p>
+        Because these parameters vary in passive ventilation systems, MVG implementation in this project is <strong>conceptual and
+        exploratory</strong>, intended to examine flow-control principles rather than to assert performance gains.
+      </p>
     </main>
 
     <nav class="page-navigation">
       <a
         href="section-04.html"
         class="nav-button nav-button-prev"
-        >Vanes & Spirals</a
+        >Vanes</a
       >
       <a
         href="section-06.html"
         class="nav-button nav-button-next"
-        >Diffuser & Summary</a
+        >Diffuser</a
       >
     </nav>
 

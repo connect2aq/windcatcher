@@ -4,6 +4,7 @@ const headerHTML = `
     <nav class="nav-container">
         <a href="index.html" class="nav-logo">WindCatcher</a>
         <ul class="nav-links">
+            <li><a href="index.html" data-page="index">Home</a></li>
             <li><a href="overview.html" data-page="overview">Overview</a></li>
             <li><a href="section-01.html" data-page="section-01">Inlet Design</a></li>
             <li><a href="section-03.html" data-page="section-03">Nose Cone</a></li>
@@ -12,6 +13,7 @@ const headerHTML = `
             <li><a href="section-06.html" data-page="section-06">Diffuser</a></li>
             <li><a href="section-07.html" data-page="section-07">Summary</a></li>
             <li><a href="appendix.html" data-page="appendix">Appendix</a></li>
+            <li><a href="citations.html" data-page="citations">Citations</a></li>
         </ul>
     </nav>
 </header>
