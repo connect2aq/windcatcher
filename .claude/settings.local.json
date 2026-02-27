@@ -4,7 +4,17 @@
       "Bash(mkdir:*)",
       "Bash(cat:*)",
       "Bash(python -c:*)",
-      "Bash(python update_html_files.py:*)"
+      "Bash(python update_html_files.py:*)",
+      "Bash(done)",
+      "Bash(node --version)",
+      "Bash(wkhtmltopdf --version)",
+      "Bash(npx --version)",
+      "Bash(node -e \"require\\(''puppeteer''\\)\")",
+      "Bash(npm install puppeteer --save-dev)",
+      "Bash(node generate-pdf.js)",
+      "Skill(commit-commands:commit-push-pr)",
+      "Skill(commit-commands:commit-push-pr:*)",
+      "Bash(git checkout -b add-pdf-generation)"
     ]
   }
 }
